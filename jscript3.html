@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Document</title>
+	<h1>THIS IS THE DEFAULT WEBPAGE</h1>
+	<p>Hey! How can we help you?</p>
+	<button>Click Here</button>
+</head>
+<body>
+	<script>
+	
+	console.log("Hey this is my javascript");   //this output doesnot show on browser, it shows on console
+	let message = "Hey, Welcome to this page";
+	alert(message);
+	let name = prompt("Enter your name here");
+	alert("Hello "+ name);
+	let choice = confirm("Do you want to open google?");
+		if (choice == true) {
+		  location.href="http://www.google.com";
+		  }
+		else {
+			alert("Redirecting to default webpage");
+			}
+	</script>
+</body>
+</html>

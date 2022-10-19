@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Selectors</title>
+	
+	<script>
+		console.log("head section");
+	</script>
+</head>
+
+<body>
+    <h1>DOM Selectors</h1>
+	<h1 class="myclass">HELLO WORLD</h1>
+	<h1 class="myclass">HELLO WORLD</h1>
+	
+	<h2 id="banner">LEARNCODEWITHVAIBHAV</h2>
+	<script>
+	
+		console.log("inside body");
+		let ht = document.documentElement;
+		console.log(ht);
+		let bd = document.body;
+		let hd = document.head;
+		console.log(bd);
+		console.log(hd);
+		let ti = document.title;
+		console.log(ti);
+		
+		let h2 = document.getElementById("banner");
+		console.log(h2);
+		h2.innerHTML = "Changed text";
+		h2.style.color = "white";
+		h2.style.backgroundColor="pink";
+		
+		let el = document.getElementsByClassName("myclass");
+		for (let element of el){
+			console.log(element);
+			element.style.color = "white";
+			element.style.backgroundColor = "grey";
+		}
+	</script>
+</body>
+</html>
