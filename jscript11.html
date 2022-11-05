@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>JavaScript Timers</title>
+</head>
+
+<body>
+<h1>JAVASCRIPT TIMERS</h1>
+<button onclick="start()">Start</button>
+<button onclick="stop()">Stop</button>
+
+	<script>
+	//setTimeout()-execute code after a delay
+	//setInterval()-execute code at regular intervals
+	
+	function myCode(){
+	console.log("Who are you?");
+	console.log("Hey... I am Vaibhav!!");
+	}
+	
+	let timer;
+	function start() {
+	setTimeout(myCode, 5000);
+	timer = setInterval(myCode, 2000);		//for repeating the function in every 2 sec.
+	//console.log(timer);
+	};
+	
+	function stop() {
+	clearInterval(timer);
+	};
+	
+	</script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+	<title>JavaScript Navigation</title>
+
+</head>
+<body>
+
+	<div id="container">
+		<h1>We are learning JavaScript</h1>
+		<p id="content">
+			<span>
+				JavaScript is one of the most popular programming language for front end as well as back end.
+			</span>
+		</p>
+		<h2>JavaScript Programming Language</h2>
+	</div>
+	
+	<button onclick="btnClick()">Click Here</button>
+	
+	<script>
+	function btnClick() {
+		let containerOb = document.getElementById("container");
+		console.log(containerOb);
+		
+		console.log(containerOb.firstElementChild.nodeName);
+		
+		let firstChild = containerOb.firstElementChild;
+		console.log(firstChild);
+		firstChild.innerHTML = "Hi!! Going to change";
+		
+		//finding last child
+		let lastChild = containerOb.lastElementChild;
+		lastChild.style.backgroundColor = "red";
+		lastChild.style.color = "white";
+		console.log(lastChild);
+		
+		let nodes = containerOb.children;
+		for (let n of nodes) {
+			console.log(n.nodeName);
+			};
+			
+		//previousSibling and nextSibling
+		let titleOb = document.getElementById("title");
+		let nextS = titleOb.nextElementSibling;
+		console.log(nextS.nodeName);
+		console.log(nextS.nextElementSibling.nodeName);
+		};
+		
+	</script>
+	
+</body>
+</html>

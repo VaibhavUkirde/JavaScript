@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+
+</head> 
+
+<body>
+
+	<div id="main">
+		<h1 id="title">hey there!!</h1>
+		<p id="hint">learn javascript in simple way</p>
+	</div>
+	<button onclick="addNode()">Add Node</button>
+	<script>
+		//adding node function
+		function addNode() {
+		console.log("adding node");
+		
+		//creating node
+		let divElement = document.createElement("div");
+		console.log(divElement);
+		
+		//creat a text node
+		let textElement = document.createTextNode("This is magic!!");
+		let textElement1 = document.createTextNode("This is the wonderful magic!!");
+		
+		//adding text node to divElement
+		divElement.appendChild(textElement);
+		divElement.appendChild(textElement1);
+		console.log(divElement);
+		
+		let mainElement = document.getElementById("main");
+		mainElement.appendChild(textElement);
+		console.log(mainElement);
+		
+		let titleElement = document.getElementById("title");
+		mainElement.insertBefore(divElement, titleElement);
+		
+		titleElement.innerHTML = "<h2> Hey There </h2>";
+		};
+		
+	
+	
+	</script>
+	
+</body>
+
+</html>

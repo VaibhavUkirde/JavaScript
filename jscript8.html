@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<a id="url" class="alert alert-danger" href="http://www.google.com">Google</a>
+<button onclick="getAttr()">GET</button>
+<button onclick="setAttr()">SET</button>
+
+</head>
+
+<body>
+
+	<script>
+		//get the attribute
+		const getAttr = () => {
+		let urlOb = document.getElementById("url");
+		console.log(urlOb.getAttribute("href"));
+		console.log(urlOb.getAttribute("id"));
+		console.log(urlOb.getAttribute("class"));
+		};
+		
+		//set the attribute
+		const setAttr = () => {
+		let urlOb = document.getElementById("url");
+		urlOb.setAttribute('href', 'https://www.yahoo.com');
+		};
+	</script>
+
+</body>
+
+</html>
